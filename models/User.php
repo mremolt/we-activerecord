@@ -19,7 +19,7 @@ class Filmgesellschaft extends \library\ActiveRecord
     
 }
 
-//print Film::getTableName();
+print Film::getTableName();
 
 var_dump(Film::getTableColumns());
 var_dump(Film::getTableColumns(false));

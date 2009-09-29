@@ -142,11 +142,22 @@ abstract class ActiveRecord
         return $this;
     }
 
+    /**
+     * Gibt den Datensatz mit der passenden ID als Objekt zurück
+     * 
+     * @param integer $id
+     * @return ActiveRecord
+     */
     public static function find($id)
     {
         $sql = 'SELECT * FROM ' . static::getTableName() . ' WHERE id = ?';
     }
 
+    /**
+     * Gibt alle Datensätze der verwalteten Tabelle als Objekte zurück
+     * 
+     * @return array
+     */
     public static function findAll()
     {
         $sql = 'SELECT * FROM ' . static::getTableName();
@@ -199,6 +210,11 @@ abstract class ActiveRecord
         return $columns;
     }
 
+    /**
+     * Speichert das Objekt als neuen Eintrag in der verwalteten Tabelle
+     *
+     * 
+     */
     protected function _insert()
     {
         $columns = static::getTableColumns(false);
@@ -221,6 +237,11 @@ abstract class ActiveRecord
         echo $sql;
     }
 
+    /**
+     * Aktualisiert den Datensatz in der verwalteten Tabelle
+     *
+     * 
+     */
     protected function _update()
     {
         $columns = static::getTableColumns(false);
