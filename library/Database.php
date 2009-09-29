@@ -1,4 +1,7 @@
 <?php
+
+namespace library;
+
 /**
  * Repräsentiert eine Datenbankverbindung
  *
@@ -30,7 +33,7 @@ final class Database
     public static function getInstance()
     {
         if (! static::$db) {
-            static::$db = new PDO('mysql:dbname=filmdb;host=127.0.0.1', 'root', '');
+            static::$db = new \PDO('mysql:dbname=filmdb;host=127.0.0.1', 'root', '');
         }
         return static::$db;
     }

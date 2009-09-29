@@ -1,22 +1,25 @@
 <?php
-require_once '../library/ActiveRecord.php';
+
+namespace models;
+
+require_once '../library/autoload.php';
 
 /**
  * Description of User
  *
  * @author Marc Remolt <m.remolt@webmasters.de>
  */
-class Film extends ActiveRecord
+class Film extends \library\ActiveRecord
 {
     
 }
 
-class Filmgesellschaft extends ActiveRecord
+class Filmgesellschaft extends \library\ActiveRecord
 {
     
 }
 
-print Film::getTableName();
+//print Film::getTableName();
 
 var_dump(Film::getTableColumns());
 var_dump(Film::getTableColumns(false));
