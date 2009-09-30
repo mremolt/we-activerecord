@@ -299,7 +299,7 @@ abstract class ActiveRecord
             static::getTableName(),
             $columnSql
         );
-        echo $sql;
+
         $statement = Database::getInstance()->prepare($sql);
         $statement->execute($this->toArray());
     }
@@ -316,6 +316,7 @@ abstract class ActiveRecord
     protected static function _stripNamespace($className)
     {
         $parts = explode('\\', $className);
+        // der Klassenname ist das letzte Element im Array
         return array_pop($parts);
     }
 }
