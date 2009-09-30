@@ -104,6 +104,23 @@ class Benutzer extends \library\ActiveRecord
         return $this;
     }
 
+    /**
+     * Gibt eine kurze Beschreibung des Objekts zurück
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return htmlspecialchars(sprintf(
+            '%s: "%s %s %s" <%s>',
+            get_called_class(),
+            $this->getAnrede(),
+            $this->getVorname(),
+            $this->getName(),
+            $this->getEmail()
+        ));
+    }
+
     public static function findBySeminartermin(Seminartermin $seminartermin)
     {
         $sql = sprintf(
