@@ -1,6 +1,7 @@
 <?php
 
 namespace library;
+use \PDO;
 
 /**
  * Repräsentiert eine Datenbankverbindung
@@ -32,8 +33,16 @@ final class Database
      */
     public static function getInstance()
     {
-        if (! static::$db) {
-            static::$db = new \PDO('mysql:dbname=filmdb;host=127.0.0.1', 'root', '');
+        if (! static::$db instanceof PDO) {
+            $dsn     = 'mysql:host=127.0.0.1;dbname=seminarverwaltung';
+            $user    = 'root';
+            $pass    = '';
+            $options = array(
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_PERSISTENT => true,
+            );
+            static::$db = new PDO($dsn, $user, $pass, $options);
+            static::$db->query('SET NAMES utf8');
         }
         return static::$db;
     }

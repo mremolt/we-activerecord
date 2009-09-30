@@ -2,6 +2,7 @@
 
 namespace library;
 use library\Database;
+use \PDO;
 
 /**
  * Basisklasse für alle Datenbank-Modelle
@@ -25,7 +26,10 @@ abstract class ActiveRecord
         if ($data) {
             foreach ($data as $k => $v) {
                 $setterName = 'set' . ucfirst($k);
-                $this->$setterName($v);
+                // wenn ein ungültiges Attribut übergeben wurde (ohne Setter), ignoriere es
+                if (method_exists($this, $setterName)) {
+                    $this->$setterName($v);
+                }
             }
         }
     }
@@ -37,7 +41,7 @@ abstract class ActiveRecord
      */
     public function __toString()
     {
-        return get_called_class() .  ': ' . $this->id;
+        return get_called_class() .  ': ' . $this->getId();
     }
 
     /**
@@ -80,6 +84,7 @@ abstract class ActiveRecord
 
     /**
      * Gibt alle aufgetretenen Fehler zurück
+     *
      * @return array
      */
     public function getErrors()
@@ -121,10 +126,14 @@ abstract class ActiveRecord
      */
     public function save()
     {
-        $this->_insert();
-        print '<br />';
-        $this->_update();
-
+        // nur speichern, wenn alle Daten im Objekt valide sind
+        if ($this->isValid()) {
+            if ($this->getId() > 0) {
+                $this->_update();
+            } else {
+                $this->_insert();
+            }
+        }
         return $this;
     }
 
@@ -135,9 +144,13 @@ abstract class ActiveRecord
      */
     public function delete()
     {
+        // nur löschen, wenn das Objekt auch schon gespeichert ist
         if ($this->getId() > 0) {
-            $sql = 'DELETE FROM ' . static::getTableName() . 'WHERE id = ?';
-            
+            $sql = 'DELETE FROM ' . static::getTableName() . ' WHERE id = ?';
+            $statement = Database::getInstance()->prepare($sql);
+            $statement->execute(array( $this->getId() ));
+            // markiere das Objekt als nicht in der Datenbank gespeichert
+            $this->setId(0);
         }
         return $this;
     }
@@ -151,6 +164,10 @@ abstract class ActiveRecord
     public static function find($id)
     {
         $sql = 'SELECT * FROM ' . static::getTableName() . ' WHERE id = ?';
+        $statement = Database::getInstance()->prepare($sql);
+        $statement->execute(array($id));
+        $statement->setFetchMode(PDO::FETCH_CLASS, get_called_class());
+        return $statement->fetch();
     }
 
     /**
@@ -161,11 +178,38 @@ abstract class ActiveRecord
     public static function findAll()
     {
         $sql = 'SELECT * FROM ' . static::getTableName();
+        
+        $statement = Database::getInstance()->query($sql);
+        $statement->setFetchMode(PDO::FETCH_CLASS, get_called_class());
+        return $statement->fetchAll();
     }
 
-    public static function findByWhere($where = '1')
+    public static function findBy($attribute, $value, $operator = '=')
     {
-        
+        // nur ausführen, wenn $attribute auch als Spalte in der Tabelle existiert
+        if ( in_array($attribute, static::getTableColumns()) ) {
+            $sql  = 'SELECT * FROM ' . static::getTableName();
+            $sql .= ' WHERE ' . $attribute . $operator . '?';
+
+            $statement = Database::getInstance()->prepare($sql);
+            $statement->execute(array($value));
+            $statement->setFetchMode(PDO::FETCH_CLASS, get_called_class());
+            return $statement->fetchAll();
+        }
+    }
+
+    /**
+     * Zählt die In der Tabelle gespeicherten Datensätze
+     * 
+     * @return integer
+     */
+    public static function count()
+    {
+        $sql = 'SELECT COUNT(id) AS count FROM ' . static::getTableName();
+        $db = Database::getInstance();
+        $statement = $db->query($sql);
+        $data = $statement->fetch();
+        return $data['count'];
     }
 
     /**
@@ -211,22 +255,15 @@ abstract class ActiveRecord
     }
 
     /**
-     * Speichert das Objekt als neuen Eintrag in der verwalteten Tabelle
-     *
-     * 
+     * Speichert das Objekt als neuen Eintrag in die verwaltete Tabelle
      */
     protected function _insert()
     {
         $columns = static::getTableColumns(false);
         $columnSql = implode(', ', $columns);
-        
         // Die benannten Parameter in SQL benötigen einen : vor dem Namen,
-        // also können wir nicht einfach nur implode() verwenden
-        $parameters = array();
-        foreach ($columns as $column) {
-            $parameters[] = ':' . $column;
-        }
-        $parameterSql = implode(', ', $parameters);
+        // also müssen wir das im implode() einbauen
+        $parameterSql = ':' . implode(', :', $columns);
 
         $sql = sprintf(
             'INSERT INTO %s (%s) VALUES (%s)',
@@ -234,13 +271,18 @@ abstract class ActiveRecord
             $columnSql,
             $parameterSql
         );
-        echo $sql;
+        
+        $db = Database::getInstance();
+        $statement = $db->prepare($sql);
+        // nicht die ID ins Array aufnehmen!
+        $statement->execute($this->toArray(false));
+        
+        // da das Objekt nun gespeichert ist, muss auch das Attribut ID gesetzt sein.
+        $this->setId(intval($db->lastInsertId()));
     }
 
     /**
      * Aktualisiert den Datensatz in der verwalteten Tabelle
-     *
-     * 
      */
     protected function _update()
     {
@@ -258,10 +300,15 @@ abstract class ActiveRecord
             $columnSql
         );
         echo $sql;
+        $statement = Database::getInstance()->prepare($sql);
+        $statement->execute($this->toArray());
     }
 
     /**
      * Entfernt das Namespace-Prefix vom Klassennamen
+     *
+     * Diese Helfermethode wird verwendet, wenn nur der Klassenname ohne Namespace
+     * benötigt wird (z.B. Errechnung des Tabellennamens).
      *
      * @param string $className
      * @return string $strippedClassName
@@ -271,5 +318,4 @@ abstract class ActiveRecord
         $parts = explode('\\', $className);
         return array_pop($parts);
     }
-
 }
