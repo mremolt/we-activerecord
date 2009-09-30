@@ -206,10 +206,28 @@ abstract class ActiveRecord
     public static function count()
     {
         $sql = 'SELECT COUNT(id) AS count FROM ' . static::getTableName();
-        $db = Database::getInstance();
-        $statement = $db->query($sql);
+        $statement = Database::getInstance()->query($sql);
         $data = $statement->fetch();
         return $data['count'];
+    }
+
+    /**
+     * Zählt die In der Tabelle gespeicherten Datensätze
+     *
+     * @return integer
+     */
+    public static function countBy($attribute, $value, $operator = '=')
+    {
+        // nur ausführen, wenn $attribute auch als Spalte in der Tabelle existiert
+        if ( in_array($attribute, static::getTableColumns()) ) {
+            $sql = 'SELECT COUNT(id) AS count FROM ' . static::getTableName();
+            $sql .= ' WHERE ' . $attribute . $operator . '?';
+
+            $statement = Database::getInstance()->prepare($sql);
+            $statement->execute(array($value));
+            $data = $statement->fetch();
+            return $data['count'];
+        }
     }
 
     /**
