@@ -8,6 +8,7 @@ use \PDO;
  * Basisklasse für alle Datenbank-Modelle
  *
  * @author Marc Remolt <m.remolt@webmasters.de>
+ * @package library
  */
 abstract class ActiveRecord
 {

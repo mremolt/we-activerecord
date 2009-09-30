@@ -4,6 +4,7 @@
  * Autoloader
  *
  * @param string $className
+ * @package library
  */
 function __autoload($className)
 {

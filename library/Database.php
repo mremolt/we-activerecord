@@ -10,6 +10,7 @@ use \PDO;
  * Exemplar der Klasse selbst, sondern ein PDO-Objekt zurückgegeben wird.
  *
  * @author Marc Remolt <m.remolt@webmasters.de>
+ * @package library
  */
 final class Database
 {

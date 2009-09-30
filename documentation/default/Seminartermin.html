@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Seminartermin</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Seminartermin</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Description of Seminartermin</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Marc Remolt &lt;<a href="mailto:m.remolt@webmasters.de">m.remolt@webmasters.de</a>&gt;</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_models---Seminartermin.php.html">/models/Seminartermin.php</a> (line <span class="field">12</span>)
+		</p>
+		
+				
+		<pre>\
+   |
+   --Seminartermin</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																												<div class="var-title">
+					static <span class="var-type">mixed</span>
+					<a href="#$_tableName" title="details" class="var-name">$_tableName</a>
+				</div>
+																				<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$beginn" title="details" class="var-name">$beginn</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ende" title="details" class="var-name">$ende</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$raum" title="details" class="var-name">$raum</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$seminar_id" title="details" class="var-name">$seminar_id</a>
+				</div>
+																			</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																				<div class="method-definition">
+					static 						<span class="method-result">array</span>
+										<a href="#findByBenutzer" title="details" class="method-name">findByBenutzer</a>
+											(<span class="var-type"><a href="../default/Benutzer.html">Benutzer</a></span>&nbsp;<span class="var-name">$benutzer</span>)
+									</div>
+																																																																																																								
+												<div class="method-definition">
+											<span class="method-result"><a href="../default/Seminartermin.html">Seminartermin</a></span>
+										<a href="#addTeilnehmer" title="details" class="method-name">addTeilnehmer</a>
+											(<span class="var-type"><a href="../default/Benutzer.html">Benutzer</a></span>&nbsp;<span class="var-name">$teilnehmer</span>)
+									</div>
+																								<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getBeginn" title="details" class="method-name">getBeginn</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getEnde" title="details" class="method-name">getEnde</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getRaum" title="details" class="method-name">getRaum</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../default/Seminar.html">Seminar</a></span>
+										<a href="#getSeminar" title="details" class="method-name">getSeminar</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">integer</span>
+										<a href="#getSeminar_id" title="details" class="method-name">getSeminar_id</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getTeilnehmer" title="details" class="method-name">getTeilnehmer</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../default/Seminartermin.html">Seminartermin</a></span>
+										<a href="#setBeginn" title="details" class="method-name">setBeginn</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$beginn</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../default/Seminartermin.html">Seminartermin</a></span>
+										<a href="#setEnde" title="details" class="method-name">setEnde</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$ende</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../default/Seminartermin.html">Seminartermin</a></span>
+										<a href="#setRaum" title="details" class="method-name">setRaum</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$raum</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../default/Seminartermin.html">Seminartermin</a></span>
+										<a href="#setSeminar" title="details" class="method-name">setSeminar</a>
+											(<span class="var-type"><a href="../default/Seminar.html">Seminar</a></span>&nbsp;<span class="var-name">$seminar</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../default/Seminartermin.html">Seminartermin</a></span>
+										<a href="#setSeminar_id" title="details" class="method-name">setSeminar_id</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$seminar_id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#__toString" title="details" class="method-name">__toString</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_tableName" id="$_tableName"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$_tableName</span>
+			 = <span class="var-default"> 'seminartermine'</span>			(line <span class="line-number">14</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$beginn" id="$beginn"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$beginn</span>
+						(line <span class="line-number">16</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$ende" id="$ende"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ende</span>
+						(line <span class="line-number">17</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$raum" id="$raum"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$raum</span>
+						(line <span class="line-number">18</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$seminar_id" id="$seminar_id"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$seminar_id</span>
+						(line <span class="line-number">19</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodfindByBenutzer" id="findByBenutzer"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method findByBenutzer</span> (line <span class="line-number">162</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Findet Seminartermine eines Benutzers über die Zwischentabelle nimmt_teil</p>
+<p class="description"><p>Hier ist ein SQL JOIN notwendig, wobei die Spalten der Zwischentabelle nicht  im Objekt auftauchen sollen, also kein SELECT *.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">array</span>
+		<span class="method-name">
+			findByBenutzer
+		</span>
+					(<span class="var-type"><a href="../default/Benutzer.html">Benutzer</a></span>&nbsp;<span class="var-name">$benutzer</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../default/Benutzer.html">Benutzer</a></span>
+				<span class="var-name">$benutzer</span>			</li>
+				</ul>
+		
+			
+	</div>
+
+<a name="methodaddTeilnehmer" id="addTeilnehmer"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">addTeilnehmer</span> (line <span class="line-number">122</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fügt dem Seminartermin einen neuen Teilnehmer (Klasse Benutzer) hinzu.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../default/Seminartermin.html">Seminartermin</a></span>
+		<span class="method-name">
+			addTeilnehmer
+		</span>
+					(<span class="var-type"><a href="../default/Benutzer.html">Benutzer</a></span>&nbsp;<span class="var-name">$teilnehmer</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../default/Benutzer.html">Benutzer</a></span>
+				<span class="var-name">$teilnehmer</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetBeginn" id="getBeginn"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getBeginn</span> (line <span class="line-number">26</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getBeginn
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetEnde" id="getEnde"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getEnde</span> (line <span class="line-number">48</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getEnde
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRaum" id="getRaum"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRaum</span> (line <span class="line-number">69</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getRaum
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSeminar" id="getSeminar"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSeminar</span> (line <span class="line-number">90</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../default/Seminar.html">Seminar</a></span>
+		<span class="method-name">
+			getSeminar
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSeminar_id" id="getSeminar_id"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSeminar_id</span> (line <span class="line-number">181</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getSeminar_id
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTeilnehmer" id="getTeilnehmer"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getTeilnehmer</span> (line <span class="line-number">111</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt die Teilnehmer (Klasse Benutzer) des Seminartermins zurück</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTeilnehmer
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetBeginn" id="setBeginn"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setBeginn</span> (line <span class="line-number">37</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../default/Seminartermin.html">Seminartermin</a></span>
+		<span class="method-name">
+			setBeginn
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$beginn</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$beginn</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetEnde" id="setEnde"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setEnde</span> (line <span class="line-number">59</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../default/Seminartermin.html">Seminartermin</a></span>
+		<span class="method-name">
+			setEnde
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$ende</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ende</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRaum" id="setRaum"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setRaum</span> (line <span class="line-number">80</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../default/Seminartermin.html">Seminartermin</a></span>
+		<span class="method-name">
+			setRaum
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$raum</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$raum</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSeminar" id="setSeminar"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setSeminar</span> (line <span class="line-number">101</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../default/Seminartermin.html">Seminartermin</a></span>
+		<span class="method-name">
+			setSeminar
+		</span>
+					(<span class="var-type"><a href="../default/Seminar.html">Seminar</a></span>&nbsp;<span class="var-name">$seminar</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../default/Seminar.html">Seminar</a></span>
+				<span class="var-name">$seminar</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSeminar_id" id="setSeminar_id"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setSeminar_id</span> (line <span class="line-number">192</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../default/Seminartermin.html">Seminartermin</a></span>
+		<span class="method-name">
+			setSeminar_id
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$seminar_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$seminar_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__toString" id="__toString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">__toString</span> (line <span class="line-number">142</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt eine kurze Beschreibung des Objekts zurück</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			__toString
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 30 Sep 2009 14:32:35 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

@@ -1,13 +1,15 @@
 <?php
 
 namespace models;
+use library\ActiveRecord;
 
 /**
- * Description of Seminar
+ * Ein Seminar
  *
  * @author Marc Remolt <m.remolt@webmasters.de>
+ * @package models
  */
-class Seminar extends \library\ActiveRecord
+class Seminar extends ActiveRecord
 {
     protected static $_tableName = 'seminare';
 

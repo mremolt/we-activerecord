@@ -1,15 +1,16 @@
 <?php
 
 namespace models;
-use library\Database;
+use library\Database, library\ActiveRecord;
 use \PDO;
 
 /**
- * Description of Benutzer
+ * Ein Benutzer
  *
  * @author Marc Remolt <m.remolt@webmasters.de>
+ * @package models
  */
-class Benutzer extends \library\ActiveRecord
+class Benutzer extends ActiveRecord
 {
     protected $vorname;
     protected $name;

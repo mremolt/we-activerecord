@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Benutzer</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Benutzer</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Ein Benutzer</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Marc Remolt &lt;<a href="mailto:m.remolt@webmasters.de">m.remolt@webmasters.de</a>&gt;</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_models---Benutzer.php.html">/models/Benutzer.php</a> (line <span class="field">13</span>)
+		</p>
+		
+				
+		<pre><a href="../library/ActiveRecord.html">ActiveRecord</a>
+   |
+   --Benutzer</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$anrede" title="details" class="var-name">$anrede</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$email" title="details" class="var-name">$email</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$name" title="details" class="var-name">$name</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$passwort" title="details" class="var-name">$passwort</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$registriert_seit" title="details" class="var-name">$registriert_seit</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$vorname" title="details" class="var-name">$vorname</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																				<div class="method-definition">
+					static 						<span class="method-result">array</span>
+										<a href="#findBySeminartermin" title="details" class="method-name">findBySeminartermin</a>
+											(<span class="var-type"><a href="../models/Seminartermin.html">Seminartermin</a></span>&nbsp;<span class="var-name">$seminartermin</span>)
+									</div>
+																																																																																																																								
+												<div class="method-definition">
+											<span class="method-result"><a href="../models/Benutzer.html">Benutzer</a></span>
+										<a href="#addSeminartermin" title="details" class="method-name">addSeminartermin</a>
+											(<span class="var-type"><a href="../models/Seminartermin.html">Seminartermin</a></span>&nbsp;<span class="var-name">$seminartetmin</span>)
+									</div>
+																								<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getAnrede" title="details" class="method-name">getAnrede</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getEmail" title="details" class="method-name">getEmail</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getName" title="details" class="method-name">getName</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getRegistriert_seit" title="details" class="method-name">getRegistriert_seit</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#getSeminartetmine" title="details" class="method-name">getSeminartetmine</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#getVorname" title="details" class="method-name">getVorname</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../models/Benutzer.html">Benutzer</a></span>
+										<a href="#setAnrede" title="details" class="method-name">setAnrede</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$anrede</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../models/Benutzer.html">Benutzer</a></span>
+										<a href="#setEmail" title="details" class="method-name">setEmail</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$email</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../models/Benutzer.html">Benutzer</a></span>
+										<a href="#setName" title="details" class="method-name">setName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../models/Benutzer.html">Benutzer</a></span>
+										<a href="#setPasswort" title="details" class="method-name">setPasswort</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$passwort</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../models/Benutzer.html">Benutzer</a></span>
+										<a href="#setRegistriert_seit" title="details" class="method-name">setRegistriert_seit</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$registriert_seit</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../models/Benutzer.html">Benutzer</a></span>
+										<a href="#setVorname" title="details" class="method-name">setVorname</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$vorname</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#validatePasswort" title="details" class="method-name">validatePasswort</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$passwort</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#__toString" title="details" class="method-name">__toString</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$anrede" id="$anrede"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$anrede</span>
+						(line <span class="line-number">20</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$email" id="$email"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$email</span>
+						(line <span class="line-number">17</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$name" id="$name"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$name</span>
+						(line <span class="line-number">16</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$passwort" id="$passwort"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$passwort</span>
+						(line <span class="line-number">18</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$registriert_seit" id="$registriert_seit"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$registriert_seit</span>
+						(line <span class="line-number">19</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$vorname" id="$vorname"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$vorname</span>
+						(line <span class="line-number">15</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../library/ActiveRecord.html">ActiveRecord</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../library/ActiveRecord.html#var$errors">ActiveRecord::$errors</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../library/ActiveRecord.html#var$id">ActiveRecord::$id</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../library/ActiveRecord.html#var$_tableName">ActiveRecord::$_tableName</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodfindBySeminartermin" id="findBySeminartermin"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method findBySeminartermin</span> (line <span class="line-number">206</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Findet Benutzer eines Seminartermins über die Zwischentabelle nimmt_teil</p>
+<p class="description"><p>Hier ist ein SQL JOIN notwendig, wobei die Spalten der Zwischentabelle nicht  im Objekt auftauchen sollen, also kein SELECT *.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">array</span>
+		<span class="method-name">
+			findBySeminartermin
+		</span>
+					(<span class="var-type"><a href="../models/Seminartermin.html">Seminartermin</a></span>&nbsp;<span class="var-name">$seminartermin</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../models/Seminartermin.html">Seminartermin</a></span>
+				<span class="var-name">$seminartermin</span>			</li>
+				</ul>
+		
+			
+	</div>
+
+<a name="methodaddSeminartermin" id="addSeminartermin"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">addSeminartermin</span> (line <span class="line-number">165</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fügt dem Benutzer einen neue Teilahme an einem Seminartermin hinzu.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../models/Benutzer.html">Benutzer</a></span>
+		<span class="method-name">
+			addSeminartermin
+		</span>
+					(<span class="var-type"><a href="../models/Seminartermin.html">Seminartermin</a></span>&nbsp;<span class="var-name">$seminartetmin</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../models/Seminartermin.html">Seminartermin</a></span>
+				<span class="var-name">$seminartetmin</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAnrede" id="getAnrede"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getAnrede</span> (line <span class="line-number">127</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getAnrede
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetEmail" id="getEmail"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getEmail</span> (line <span class="line-number">71</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getEmail
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetName" id="getName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getName</span> (line <span class="line-number">49</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getName
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRegistriert_seit" id="getRegistriert_seit"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRegistriert_seit</span> (line <span class="line-number">105</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getRegistriert_seit
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSeminartetmine" id="getSeminartetmine"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSeminartetmine</span> (line <span class="line-number">154</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getSeminartetmine
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetVorname" id="getVorname"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getVorname</span> (line <span class="line-number">27</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getVorname
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetAnrede" id="setAnrede"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setAnrede</span> (line <span class="line-number">138</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../models/Benutzer.html">Benutzer</a></span>
+		<span class="method-name">
+			setAnrede
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$anrede</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$anrede</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetEmail" id="setEmail"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setEmail</span> (line <span class="line-number">82</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../models/Benutzer.html">Benutzer</a></span>
+		<span class="method-name">
+			setEmail
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$email</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$email</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetName" id="setName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setName</span> (line <span class="line-number">60</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../models/Benutzer.html">Benutzer</a></span>
+		<span class="method-name">
+			setName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPasswort" id="setPasswort"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPasswort</span> (line <span class="line-number">94</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../models/Benutzer.html">Benutzer</a></span>
+		<span class="method-name">
+			setPasswort
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$passwort</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$passwort</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRegistriert_seit" id="setRegistriert_seit"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setRegistriert_seit</span> (line <span class="line-number">116</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../models/Benutzer.html">Benutzer</a></span>
+		<span class="method-name">
+			setRegistriert_seit
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$registriert_seit</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$registriert_seit</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetVorname" id="setVorname"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setVorname</span> (line <span class="line-number">38</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Setter</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../models/Benutzer.html">Benutzer</a></span>
+		<span class="method-name">
+			setVorname
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$vorname</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$vorname</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidatePasswort" id="validatePasswort"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validatePasswort</span> (line <span class="line-number">144</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			validatePasswort
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$passwort</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$passwort</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__toString" id="__toString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__toString</span> (line <span class="line-number">185</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gibt eine kurze Beschreibung des Objekts zurück</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			__toString
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../library/ActiveRecord.html#method__toString">ActiveRecord::__toString()</a></dt>
+						<dd>Gibt eine kurze Beschreibung des Objekts zurück</dd>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../library/ActiveRecord.html">ActiveRecord</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../library/ActiveRecord.html#method__construct">ActiveRecord::__construct()</a></span><br>
+													<span class="method-name"><a href="../library/ActiveRecord.html#methodgetId">ActiveRecord::getId()</a></span><br>
+													<span class="method-name"><a href="../library/ActiveRecord.html#methodsetId">ActiveRecord::setId()</a></span><br>
+													<span class="method-name"><a href="../library/ActiveRecord.html#methodtoArray">ActiveRecord::toArray()</a></span><br>
+													<span class="method-name"><a href="../library/ActiveRecord.html#method__toString">ActiveRecord::__toString()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 30 Sep 2009 14:41:11 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

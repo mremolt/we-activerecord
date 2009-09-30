@@ -1,4 +1,10 @@
 <?php
+/**
+ * Tests für Seminartermin
+ *
+ * @package tests
+ * @author Marc Remolt <m.remolt@webmasters.de>
+ */
 
 require_once 'library/autoload.php';
 use \models\Seminartermin, \models\Seminar, \models\Benutzer;
