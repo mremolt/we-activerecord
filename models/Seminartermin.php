@@ -1,6 +1,8 @@
 <?php
 
 namespace models;
+use library\Database;
+use \PDO;
 
 /**
  * Description of Seminartermin
@@ -102,6 +104,37 @@ class Seminartermin extends \library\ActiveRecord
     }
 
     /**
+     * Gibt die Teilnehmer (Klasse Benutzer) des Seminartermins zurück
+     * 
+     * @return array
+     */
+    public function getTeilnehmer()
+    {
+        return Benutzer::findBySeminartermin($this);
+    }
+
+    /**
+     * Fügt dem Seminartermin einen neuen Teilnehmer (Klasse Benutzer) hinzu.
+     *
+     * @param Benutzer $teilnehmer
+     * @return Seminartermin
+     */
+    public function addTeilnehmer(Benutzer $teilnehmer)
+    {
+        // wir können die Zwischentabelle nicht befüllen, so lange der Benutzer
+        // nicht gespeichert ist.
+        if ( ! $teilnehmer->getId() > 0 ) {
+            $teilnehmer->save();
+        }
+
+        $sql = 'INSERT INTO nimmt_teil (benutzer_id, seminartermin_id) VALUES (?, ?)';
+        $statement = Database::getInstance()->prepare($sql);
+        $statement->execute(array( $teilnehmer->getId(), $this->getId() ));
+
+        return $this;
+    }
+
+    /**
      * Gibt eine kurze Beschreibung des Objekts zurück
      *
      * @return string
@@ -115,6 +148,27 @@ class Seminartermin extends \library\ActiveRecord
             $this->getBeginn(),
             $this->getEnde()
         );
+    }
+
+    /**
+     * Findet Seminartermine eines Benutzers über die Zwischentabelle nimmt_teil
+     *
+     * Hier ist ein SQL JOIN notwendig, wobei die Spalten der Zwischentabelle nicht
+     * im Objekt auftauchen sollen, also kein SELECT *.
+     *
+     * @param Benutzer $benutzer
+     * @return array
+     */
+    public static function findByBenutzer(Benutzer $benutzer)
+    {
+        $sql = sprintf(
+            'SELECT %s FROM seminartermine st JOIN nimmt_teil nt ON st.id = nt.seminartermin_id WHERE nt.benutzer_id = ?',
+            implode(', ', static::getTableColumns())  
+        );
+        $statement = Database::getInstance()->prepare($sql);
+        $statement->execute(array( $benutzer->getId() ));
+        $statement->setFetchMode(PDO::FETCH_CLASS, get_called_class());
+        return $statement->fetchAll();
     }
 
     // diese Zugriffsmethoden sind nur zur internen Verwendung

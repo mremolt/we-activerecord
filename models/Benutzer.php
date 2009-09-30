@@ -1,6 +1,8 @@
 <?php
 
 namespace models;
+use library\Database;
+use \PDO;
 
 /**
  * Description of Benutzer
@@ -80,5 +82,37 @@ class Benutzer extends \library\ActiveRecord
     public function validatePasswort($passwort)
     {
         return $this->passwort === $passwort;
+    }
+
+    public function getSeminartetmine()
+    {
+        return Seminartermin::findByBenutzer($this);
+    }
+
+    public function addSeminartermin(Seminartermin $seminartetmin)
+    {
+        // wir können die Zwischentabelle nicht befüllen, so lange der Seminartermin
+        // nicht gespeichert ist.
+        if ( ! $seminartetmin->getId() > 0 ) {
+            $seminartetmin->save();
+        }
+
+        $sql = 'INSERT INTO nimmt_teil (benutzer_id, seminartermin_id) VALUES (?, ?)';
+        $statement = Database::getInstance()->prepare($sql);
+        $statement->execute(array( $this->getId(), $seminartetmin->getId() ));
+
+        return $this;
+    }
+
+    public static function findBySeminartermin(Seminartermin $seminartermin)
+    {
+        $sql = sprintf(
+            'SELECT %s FROM benutzer be JOIN nimmt_teil nt ON be.id = nt.benutzer_id WHERE nt.seminartermin_id = ?',
+            implode(', ', static::getTableColumns())
+        );
+        $statement = Database::getInstance()->prepare($sql);
+        $statement->execute(array( $seminartermin->getId() ));
+        $statement->setFetchMode(PDO::FETCH_CLASS, get_called_class());
+        return $statement->fetchAll();
     }
 }
