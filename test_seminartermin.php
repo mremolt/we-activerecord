@@ -13,3 +13,5 @@ $se4 = Seminar::find(4);
 
 $st3->setSeminar($se4);
 $st3->save();
+
+print $st3;
